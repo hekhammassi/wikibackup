@@ -2,7 +2,7 @@
 title: start-your-journey-with-cooperons
 description: 
 published: true
-date: 2024-05-06T14:50:27.527Z
+date: 2024-05-06T14:50:46.209Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-03T21:50:43.385Z
@@ -13,8 +13,8 @@ Ce guide détaillé vous accompagnera dans la mise en place d'un environnement d
 
 ## Étape 1 : Clonage des Répertoires
 
-D'abbord il faut ajouter ton utlisateur dans le projet stack pour que tu puisse cloner le repo
-
+**NB: il faut ajouter ton utlisateur dans le projet stack pour que tu puisse cloner le repo
+**
    Créez un nouveau répertoire dédié à votre projet et clonez les dépôts contenant le code source requis .
 ```
   mkdir /home/user/cooperons

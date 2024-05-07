@@ -2,13 +2,17 @@
 title: Create Environment DEV
 description: 
 published: true
-date: 2024-05-06T09:42:42.848Z
+date: 2024-05-07T07:33:40.579Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-08T13:18:57.978Z
 ---
 
 # Créer son environnement de DEV 
+
+## Preparer l'environnement du PC
+
+`curl -s -H 'Authorization:Basic Zm9uZGF0aXZlOkZvbmRhdGl2ZVRlbXBsYXRlczIwMjM=' https://dev.fondative.com/init-debian.sh`
 
 ##  Installation 
 

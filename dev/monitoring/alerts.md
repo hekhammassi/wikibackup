@@ -2,7 +2,7 @@
 title: Alerts
 description: 
 published: true
-date: 2024-05-15T08:59:37.716Z
+date: 2024-05-15T09:33:49.078Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-15T08:59:37.716Z
@@ -23,4 +23,6 @@ Définissez le comportement d'évaluation des alertes : Utilisez l’évaluation
 Configurez les labels et les notifications : Configurez qui reçoit une notification lorsqu'une règle d'alerte se déclenche en choisissant Sélectionner le point de contact .
 ![a4.png](/a4.png)
 Ajoutez des annotations : Les annotations ajoutent des métadonnées pour fournir plus d'informations sur l'alerte dans votre message de notification d'alerte. 
+
+`{{ $labels.cluster }} : Job {{ $labels.job}} failed to complete. Removing failed job after investigation should clear this alert.  `
 ![a5.png](/a5.png)

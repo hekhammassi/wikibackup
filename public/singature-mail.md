@@ -2,13 +2,29 @@
 title: Signature Mail
 description: 
 published: true
-date: 2024-05-28T10:58:07.175Z
+date: 2024-05-28T16:41:31.956Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T10:58:07.175Z
 ---
 
 # Étapes Pour ajouter une signature Email
+
+## Sur ThunderBird:
+* Cliquez sur le bouton paramètre (Mentionnée par le numéro 1)
+* Cliquez sur Account Settings (Mentionnée par le numéro 2)
+
+![signature-thunderbird2.png](/signature-thunderbird2.png)
+
+
+
+* Coller Votre Signature dans le zone appele Signature text dans   la figure ci-dessous
+* cocher l'option **Use HTML**
+
+![signature-thunderbird.png](/signature-thunderbird.png)
+
+## Sur Webmail
+
 ![signature.png](/signature.png)
 
 1- Cliquez sur paramètres

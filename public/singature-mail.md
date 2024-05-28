@@ -2,7 +2,7 @@
 title: Signature Mail
 description: 
 published: true
-date: 2024-05-28T16:41:31.956Z
+date: 2024-05-28T16:42:10.202Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T10:58:07.175Z
@@ -20,6 +20,12 @@ dateCreated: 2024-05-28T10:58:07.175Z
 
 * Coller Votre Signature dans le zone appele Signature text dans   la figure ci-dessous
 * cocher l'option **Use HTML**
+il faut faire les modifications suivantes:
+- La ligne 87 contient le nom et prénom du propriétaire à changer.
+- La ligne 88 contient le poste du propriétaire à changer.
+- La ligne 93 contient le numéro de téléphone à changer.
+- Les lignes 97 et 98 contiennent l'email du propriétaire à changer.
+
 
 ![signature-thunderbird.png](/signature-thunderbird.png)
 

@@ -2,13 +2,13 @@
 title: Home
 description: 
 published: true
-date: 2024-05-28T10:46:18.052Z
+date: 2024-05-28T10:49:57.435Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-08T13:52:09.188Z
 ---
 
-# Etapes Pour l'ajout d'une signature Email
+# Étapes Pour ajouter une signature Email
 ![signature.png](/signature.png)
 
 1- Cliquez sur paramètres

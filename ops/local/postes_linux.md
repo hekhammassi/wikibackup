@@ -2,7 +2,7 @@
 title: Postes Linux
 description: 
 published: true
-date: 2024-06-24T10:41:37.211Z
+date: 2024-06-24T10:47:31.984Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-17T09:05:46.868Z
@@ -22,6 +22,8 @@ En user:
 
 ```
 usermod -aG docker $USER
+chmod 666 /var/run/docker.sock
+systemctl restart docker
 ```
 ```
 warp-cli teams-enroll fondative

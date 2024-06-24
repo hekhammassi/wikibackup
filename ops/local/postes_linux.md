@@ -2,7 +2,7 @@
 title: Postes Linux
 description: 
 published: true
-date: 2024-06-06T09:21:46.041Z
+date: 2024-06-24T10:41:37.211Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-17T09:05:46.868Z
@@ -12,9 +12,19 @@ dateCreated: 2023-07-17T09:05:46.868Z
 
 ## Oneshot
 
+En root:
 ```
 curl -s -H 'Authorization:Basic Zm9uZGF0aXZlOkZvbmRhdGl2ZVRlbXBsYXRlczIwMjM=' https://dev.fondative.com/init-debian.sh | bash
 
+```
+
+En user:
+
+```
+usermod -aG docker $USER
+```
+```
+warp-cli teams-enroll fondative
 ```
 
 ## Verrouillage

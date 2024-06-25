@@ -2,7 +2,7 @@
 title: Postes Linux
 description: 
 published: true
-date: 2024-06-24T11:01:58.454Z
+date: 2024-06-25T08:16:59.961Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-17T09:05:46.868Z
@@ -29,6 +29,11 @@ En user:
 ```
 warp-cli teams-enroll fondative
 ```
+
+Pour autoriser les user à se conencter au Wifi:
+
+```
+adduser $USER netdev ```
 
 ## Verrouillage
 

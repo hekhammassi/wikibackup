@@ -2,7 +2,7 @@
 title: GitOps - Structure
 description: 
 published: true
-date: 2024-07-10T05:43:45.956Z
+date: 2024-07-10T05:58:47.761Z
 tags: 
 editor: markdown
 dateCreated: 2024-07-10T05:43:45.956Z
@@ -32,7 +32,7 @@ applications
 	|__	resources
 		  |__ exertis-portal
 		 		  |__ app1
-		 	      |__ app2
+		      |__ app2
 		  |__ exertis-web
 			      |__ app1
 			      |__ app2

@@ -2,7 +2,7 @@
 title: GitOps - Structure
 description: 
 published: true
-date: 2024-07-10T05:58:47.761Z
+date: 2024-07-10T06:02:14.853Z
 tags: 
 editor: markdown
 dateCreated: 2024-07-10T05:43:45.956Z
@@ -72,6 +72,6 @@ infratructure
 	        		      |     |__argo_ingres
 	        		      |     |__argo_secerts
 					      |__ appinfra1
-		 			      |__ appinfra2
+		 	 	      |__ appinfra2
 
 ```

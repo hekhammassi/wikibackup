@@ -2,7 +2,7 @@
 title: Exertis
 description: 
 published: true
-date: 2024-06-26T06:53:10.902Z
+date: 2024-08-06T13:17:12.140Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-14T09:26:20.872Z
@@ -70,7 +70,7 @@ After you’ve deployed the JAR profile to the /deployments or /provider directo
   
   * Add a condition for "Collaborators"
 
-![screen_otp_keycloak_mfa.png](/screen_otp_keycloak_mfa.png)
+![screen_otp_keycloak_mfa2.png](/screen_otp_keycloak_mfa2.png)
 
 ## Load-balancer / Ingress controller / Ingress
 

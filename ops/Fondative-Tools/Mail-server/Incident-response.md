@@ -2,7 +2,7 @@
 title: Mail-Service-`Incident-response
 description: 
 published: true
-date: 2024-12-20T08:30:06.192Z
+date: 2024-12-20T08:30:55.919Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-18T15:43:24.118Z
@@ -34,8 +34,7 @@ S'il y a des processus actifs, terminez-les :
 - Modifiez la taille en 90 Go (voir capture d'écran).
 ![2.png](/2.png)
 3. Ajuster le volume /var/vmail avec cfdisk
-
-Exécutez la commande suivante pour redimensionner la partition en question(relative a /var/vmail, db1 dans ce cas) :
+Exécutez la commande suivante pour redimensionner la partition en question(relative a /var/vmail, sda1 dans ce cas) :
 ```sudo cfdisk /dev/sda1```
 ![4.png](/4.png)
 ![5.png](/5.png)

@@ -2,7 +2,7 @@
 title: Mail-Service-`Incident-response
 description: 
 published: true
-date: 2024-12-20T09:47:26.118Z
+date: 2024-12-20T09:48:29.808Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-18T15:43:24.118Z
@@ -17,12 +17,9 @@ Pour éviter les conflits, arrêtez tous les services utilisant le volume /var/v
 
 
 >   En cas ou vous trouvez que le volume est toujours utilisé .
-{.is-danger}
-
-Ensuite, vérifiez les processus encore actifs sur ce volume :
+vérifiez les processus encore actifs sur ce volume :
 ```lsof +D /var/vmail```
 S'il y a des processus actifs, terminez-les :
-
 ```kill -9 <PID>```
 
 2. Redimensionner le volume sur OVH à 90 Go:

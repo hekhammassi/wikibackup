@@ -2,7 +2,7 @@
 title: Ajout du stockage Service Mail
 description: 
 published: true
-date: 2024-12-20T09:49:15.517Z
+date: 2024-12-20T10:51:21.941Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-18T15:43:24.118Z
@@ -31,7 +31,7 @@ S'il y a des processus actifs, terminez-les :
 ![2.png](/2.png)
 3. Ajuster le volume /var/vmail avec cfdisk
 
-Exécutez la commande suivante pour redimensionner la partition en question(relative a /var/vmail, db1 dans ce cas) :
+Exécutez la commande suivante pour redimensionner la partition en question(relative a /var/vmail, sda1 dans ce cas) :
 ```sudo cfdisk /dev/sda1```
 ![4.png](/4.png)
 ![5.png](/5.png)

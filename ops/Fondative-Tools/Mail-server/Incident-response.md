@@ -1,8 +1,8 @@
 ---
-title: Mail-Service-`Incident-response
+title: Ajout du stockage Service Mail
 description: 
 published: true
-date: 2024-12-20T09:48:29.808Z
+date: 2024-12-20T09:49:15.517Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-18T15:43:24.118Z

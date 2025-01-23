@@ -2,7 +2,7 @@
 title: Postes Linux
 description: 
 published: true
-date: 2024-06-25T08:16:59.961Z
+date: 2025-01-23T09:57:00.662Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-17T09:05:46.868Z
@@ -27,7 +27,10 @@ systemctl restart docker
 En user:
 
 ```
-warp-cli teams-enroll fondative
+warp-cli teams-enroll fondative #deprecated
+
+#New Command:
+warp-cli registration new fondative
 ```
 
 Pour autoriser les user à se conencter au Wifi:

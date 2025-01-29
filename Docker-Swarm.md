@@ -2,7 +2,7 @@
 title: Docker-Swarm
 description: 
 published: true
-date: 2025-01-29T18:34:02.220Z
+date: 2025-01-29T18:34:41.586Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T12:40:40.859Z
@@ -197,5 +197,5 @@ sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
 ```bash
 sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
 ```
-Avec ces étapes, votre serveur est prêt à exécuter Docker Swarm et à orchestrer des conteneurs efficacement. 🚀
+Avec ces étapes, votre serveur est prêt à exécuter Docker Swarm et à orchestrer des conteneurs efficacement.
 

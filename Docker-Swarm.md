@@ -2,7 +2,7 @@
 title: Docker-Swarm
 description: 
 published: true
-date: 2025-01-29T12:40:40.859Z
+date: 2025-01-29T18:34:02.220Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T12:40:40.859Z
@@ -189,6 +189,13 @@ sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
 ```
 
 ---
+## Étape 8 : Automatiser le deploiement du stack avec un pipeline
 
+1. **Préparer le docker compose**
+2. **Ajouter le clé privé dans un variable CI/CD au niveau gitlab**
+3. **Ajouter le stage de deploiement**
+```bash
+sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
+```
 Avec ces étapes, votre serveur est prêt à exécuter Docker Swarm et à orchestrer des conteneurs efficacement. 🚀
 

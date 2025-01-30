@@ -2,7 +2,7 @@
 title: Docker-Swarm
 description: 
 published: true
-date: 2025-01-30T09:13:02.798Z
+date: 2025-01-30T09:13:19.879Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T12:40:40.859Z
@@ -181,11 +181,6 @@ sudo docker service ls
 ### Inspecter un service
 ```bash
 sudo docker service inspect <NOM_SERVICE>
-```
-
-### Mettre à l'échelle un service
-```bash
-sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
 ```
 
 ---

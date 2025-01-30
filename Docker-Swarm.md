@@ -2,7 +2,7 @@
 title: Docker-Swarm
 description: 
 published: true
-date: 2025-01-29T18:34:41.586Z
+date: 2025-01-30T09:13:02.798Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T12:40:40.859Z
@@ -195,7 +195,16 @@ sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
 2. **Ajouter le clé privé dans un variable CI/CD au niveau gitlab**
 3. **Ajouter le stage de deploiement**
 ```bash
-sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
+ script:
+    - apk update && apk add  openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_SERVER"
+    - echo "$SSH_PRIVATE_KEY_SERVER" | tr -d '\r' | ssh-add - > /dev/null
+    - ssh -o StrictHostKeyChecking=no USER@<IP_SERVEUR> "sudo sed -i 's|^IMAGE=.*|IMAGE=$REGISTRY_PATH/$CI_PROJECT_NAME-$CI_COMMIT_BRANCH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID|' /opt/angular-nodejs-mysql/.env"
+    - ssh -o StrictHostKeyChecking=no USERn@<IP_SERVEUR> "cd /opt/angular-nodejs-mysql && sudo docker compose config | yq e 'del(.name) | (.services[].ports[].published) |= tonumber' - >/tmp/docker-compose-subst.yaml "
+    - ssh -o StrictHostKeyChecking=no USER@<IP_SERVEUR> "sudo docker stack deploy -c /tmp/docker-compose-subst.yaml demo-angular-$CI_COMMIT_BRANCH"
+ 
+
 ```
 Avec ces étapes, votre serveur est prêt à exécuter Docker Swarm et à orchestrer des conteneurs efficacement.
 

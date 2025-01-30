@@ -2,7 +2,7 @@
 title: Docker-Swarm
 description: 
 published: true
-date: 2025-01-30T09:33:45.568Z
+date: 2025-01-30T09:34:26.676Z
 tags: 
 editor: markdown
 dateCreated: 2025-01-29T12:40:40.859Z
@@ -105,7 +105,7 @@ sudo docker service scale <NOM_SERVICE>=<NOMBRE_REPLICAS>
     - apk update && apk add  openssh-client
     - eval $(ssh-agent -s)
     - ssh -o StrictHostKeyChecking=no USER@<IP_SERVEUR> "sudo sed -i 's|^IMAGE=.*|IMAGE=$REGISTRY_PATH/$CI_PROJECT_NAME-$CI_COMMIT_BRANCH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID|' /opt/angular-nodejs-mysql/.env"
-    - ssh -o StrictHostKeyChecking=no USERn@<IP_SERVEUR> "cd /opt/angular-nodejs-mysql && sudo docker compose config | yq e 'del(.name) | (.services[].ports[].published) |= tonumber' - >/tmp/docker-compose-subst.yaml "
+    - ssh -o StrictHostKeyChecking=no USER@<IP_SERVEUR> "cd /opt/angular-nodejs-mysql && sudo docker compose config | yq e 'del(.name) | (.services[].ports[].published) |= tonumber' - >/tmp/docker-compose-subst.yaml "
     - ssh -o StrictHostKeyChecking=no USER@<IP_SERVEUR> "sudo docker stack deploy -c /tmp/docker-compose-subst.yaml demo-angular-$CI_COMMIT_BRANCH"
  
 

@@ -2,7 +2,7 @@
 title: FreeScout
 description: 
 published: true
-date: 2025-02-28T14:01:17.922Z
+date: 2025-02-28T14:30:21.982Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-28T13:02:59.669Z

@@ -2,7 +2,7 @@
 title: GitOps Architecture
 description: 
 published: true
-date: 2025-03-02T23:13:05.323Z
+date: 2025-03-02T23:15:39.555Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-02T23:13:05.323Z
@@ -155,8 +155,8 @@ Continuous deployment Structure (CD)
                 ├── crons
                     ├── app-name
                     │   └── cron-name1.yaml
-                    └── app-name
-                        └── cron-name1.yaml
+                    └── app-name2
+                        └── cron-name2.yaml
                 ├── envs
                     ├── app-name
                     │   ├── env-app-name-develop-configmap.yaml

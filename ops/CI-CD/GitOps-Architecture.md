@@ -2,7 +2,7 @@
 title: GitOps Architecture
 description: 
 published: true
-date: 2025-03-02T23:15:39.555Z
+date: 2025-03-02T23:18:03.304Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-02T23:13:05.323Z
@@ -49,7 +49,7 @@ Continuous deployment Structure (CD)
 ```
 ├── applications
     ├── manifests
-				├── Cluster-Name1 (Simple Manifest Example)
+				├── Cluster-Name1
             ├── develop
                 ├── main.yaml
                 ├── manifest-app-1.yaml

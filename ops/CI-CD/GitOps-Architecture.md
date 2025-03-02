@@ -2,7 +2,7 @@
 title: GitOps Architecture
 description: 
 published: true
-date: 2025-03-02T23:18:03.304Z
+date: 2025-03-02T23:18:58.666Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-02T23:13:05.323Z

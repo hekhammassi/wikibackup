@@ -2,7 +2,7 @@
 title: GitOps Architecture
 description: 
 published: true
-date: 2025-03-03T01:00:53.411Z
+date: 2025-03-03T01:03:47.895Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-02T23:13:05.323Z
@@ -69,7 +69,7 @@ Continuous deployment Structure (CD)
                 ├── manifest-app-2.yaml
                 ├── manifest-app-3.yaml
 
-        ├── Cluster-Name2 ( An example of the ApplicationSet deployment Model)
+        ├── Cluster-Name2 (An example of the ApplicationSet deployment Model)
             ├── develop
                  ├── applications.yaml
                  ├── deployment_manifest.yaml
@@ -87,7 +87,7 @@ Continuous deployment Structure (CD)
         ├── Cluster-Name1
              ├── app-1
                  ├── Chart.yaml
-                 ├── templates
+                 ├── templates  // an example of deployment files that an application usually contains
                      ├── backend-deployment.yaml
                      ├── backend-service.yaml
                      ├── consumer-deployment.yaml

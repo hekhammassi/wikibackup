@@ -2,7 +2,7 @@
 title: GitOps Architecture
 description: 
 published: true
-date: 2025-03-02T23:18:58.666Z
+date: 2025-03-03T01:00:53.411Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-02T23:13:05.323Z
@@ -16,12 +16,10 @@ Continuous Integration Structure (CI)
 ```
 // The Dockerfiles used to build the application docker images
  ├── Dockerfiles
-    ├── debian-backup
-        └── Dockerfile
-    ├── nginx-react
+    ├── nginx-react  // an example of an nginx-react app to build
         ├── default.conf
         └── Dockerfile
-    ├── php8.2-fpm
+    ├── php8.2-fpm   // an example of an php-fpm app to build
         ├── consumer-data-portal.conf
         ├── consumer-pricing.conf
         ├── Dockerfile
@@ -29,12 +27,7 @@ Continuous Integration Structure (CI)
         ├── php.ini
         ├── README.md
         └── www.conf
-    ├── php8.2-fpm-web
-        ├── Dockerfile
-        ├── php.ini
-        ├── README.md
-        └── www.conf
-    ├── reverse-proxy
+    ├── reverse-proxy // an example of a reverse proxy app to build
         ├── default.conf
         └── Dockerfile
 ├── .gitlab-ci-back-nodejs.yml   // Continuous integration files containing the pipeline stages
@@ -76,7 +69,7 @@ Continuous deployment Structure (CD)
                 ├── manifest-app-2.yaml
                 ├── manifest-app-3.yaml
 
-        ├── Cluster-Name2 (ApplicationSet Manifest Example)
+        ├── Cluster-Name2 ( An example of the ApplicationSet deployment Model)
             ├── develop
                  ├── applications.yaml
                  ├── deployment_manifest.yaml
@@ -132,7 +125,7 @@ Continuous deployment Structure (CD)
                  └── values-staging.yaml
              ├── db-secrets
                  └── db-secrets.yaml
-             ├── common
+             ├── common    // deployments that are common across all environments 
                  ├── Chart.yaml
                  ├── templates
                      ├── common-deployment1.yaml
@@ -174,7 +167,7 @@ Continuous deployment Structure (CD)
                 ├── phpmyadmin-service.yaml
                 ├── reverse-configmap.yaml
                 ├── secret-regcred.yaml
-            └── values
+            ├── values
                 ├── app1
                     ├── values-app1-develop.yaml
                     ├── values-app1-master.yaml

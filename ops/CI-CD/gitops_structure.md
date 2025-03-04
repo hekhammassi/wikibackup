@@ -2,7 +2,7 @@
 title: GitOps - Structure
 description: 
 published: true
-date: 2024-07-10T06:02:14.853Z
+date: 2025-03-04T07:32:14.233Z
 tags: 
 editor: markdown
 dateCreated: 2024-07-10T05:43:45.956Z
@@ -12,66 +12,94 @@ dateCreated: 2024-07-10T05:43:45.956Z
 
 ```
 
-applications
-	|__	manifests
-	|	   |__ exertis-portal
-	|	 		  |__production
-	|	  		  |	  |__ main.yaml
-	|	   		  |	  |__ manifest1
-	|	   		  |	  |__ manifest2
-	|	   		  |__staging
-	|	   		  |	  |__ main.yaml
-	|	  		  |	  |__ manifest1
-	|	   		  |	  |__ manifest2
-	|	    	  |__dev
-	|	  		      |__ main.yaml
-	|			      |__ manifest1
-	|			      |__ manifest2
-	|
-	|
-	|__	resources
-		  |__ exertis-portal
-		 		  |__ app1
-		      |__ app2
-		  |__ exertis-web
-			      |__ app1
-			      |__ app2
-
-
-infratructure
-	|__ manifests
-	|	   |__ exertis-portal
-	|	 	    	|__cluster-prod
- 	|   	    	|     |__common
- 	|   	    	|     |     |__ main.yaml # le manifest pointe vers "common dans ressources"
-	|   	    	|     |__production
-	|   	    	|           |__ main.yaml
-	|   	    	| 	        |__ manifest1
-	|   	    	|	        |__ manifest2
-	|   	    	|__cluster-dev-staging
- 	|   	    	      |__common
- 	|   	    	      |     |__ main.yaml
-	| 	        	 	  |__staging
-	| 	        	      |     |__ main.yaml
-	|   	    	 	  |	    |__ manifest1
-	| 	        	 	  |	    |__ manifest2
-	| 	        	      |__dev
-	| 		                    |__ main.yaml
-	| 		         		    |__ manifest1
-	| 		         		    |__ manifest2
-	|__resources
-		   |__ exertis-portal
-	  			    |__cluster-prod
-	    		    |  	  |__common
-	     	    	|     |     |__argo_ingres
-	     	    	|	    |     |__argo_secerts
-			      	|     |__ appinfra1
-		 	      	|     |__ appinfra2
-	  		      |__cluster-staging
-	     		          |__common
-	        		      |     |__argo_ingres
-	        		      |     |__argo_secerts
-					      |__ appinfra1
-		 	 	      |__ appinfra2
-
+APPS
+├── API - backend
+│   └── code source
+├── APP - admin
+│   └── code source
+└── APP - frontend
+    └── code source
+CI-CD
+├── ci-config
+│   ├── Dockerfiles
+│   │   ├── backup
+│   │   │   └── Dockerfile
+│   │   ├── .gitkeep
+│   │   └── php
+│   │       ├── Dockerfile
+│   │       └── .gitkeep
+│   ├── .env-global.yml
+│   ├── .gitlab-ci-back.yml
+│   ├── .gitlab-ci-front.yml
+│   ├── .gitlab-ci-admin.yml
+│   ├── .gitlab-ci.yml
+│   └── README.md
+├── cd-config
+│   ├── applications
+│   │   ├── manifests
+│   │   │   └── production
+│   │   │       ├── api-backend.yaml
+│   │   │       ├── main.yaml
+│   │   │       ├── app-frontend.yaml
+│   │   │       └── app-admin.yaml
+│   │   └── resources
+│   │       ├── api-backend
+│   │       │   ├── Chart.yaml
+│   │       │   ├── templates
+│   │       │   │   ├── api-backend-deployment.yaml
+│   │       │   │   ├── api-backend-service.yaml
+│   │       │   │   ├── ingress.yaml
+│   │       │   │   ├── issuer.yaml
+│   │       │   │   └── reverse-configmap.yaml
+│   │       │   └── values.yaml
+│   │       ├── app-frontend
+│   │       │   ├── Chart.yaml
+│   │       │   ├── templates
+│   │       │   │   ├── frontend-deployment.yaml
+│   │       │   │   ├── frontend-service.yaml
+│   │       │   │   ├── ingress.yaml
+│   │       │   │   ├── issuer.yaml
+│   │       │   │   └── nginx-config-configmap.yaml
+│   │       │   └── values.yaml
+│   │       └── app-admin
+│   │           ├── Chart.yaml
+│   │           ├── templates
+│   │           │   ├── app-admin-deployment.yaml
+│   │           │   ├── app-admin-service.yaml
+│   │           │   ├── ingress.yaml
+│   │           │   └── issuer.yaml
+│   │           └── values.yaml
+│   ├── infrastructure
+│   │   ├── manifests
+│   │   │   └── cluster-prod
+│   │   │       └── common
+│   │   │           ├── argocd.yaml
+│   │   │           ├── backups.yaml
+│   │   │           ├── cert-manager.yaml
+│   │   │           ├── main.yaml
+│   │   │           ├── nginx-controller.yaml
+│   │   │           ├── registry-credentials.yaml
+│   │   │           ├── sealed-secrets.yaml
+│   │   │           └── velero.yaml
+│   │   └── resources
+│   │       └── cluster-prod
+│   │           ├── common
+│   │           │   ├── argocd
+│   │           │   │   ├── argo-cm-configmap.yaml
+│   │           │   │   ├── git-repo-secrets.yaml
+│   │           │   │   └── rbac-configmap.yaml
+│   │           │   └── backups
+│   │           │       ├── Chart.yaml
+│   │           │       ├── templates
+│   │           │       │   ├── borg-passphrase-secrets-sealed.yaml
+│   │           │       │   ├── db-backup-cronjob.yaml
+│   │           │       │   ├── db-credentials-secrets.yaml
+│   │           │       │   ├── db-script-configmap.yaml
+│   │           │       │   ├── rclone-config-secrets-sealed.yaml
+│   │           │       │   └── smtp-credentials-secrets.yaml
+│   │           │       └── values.yaml
+│   │           └── production
+│   │               └── registry-credentials
+│   │                   └── regcred-secrets-sealed.yaml
+└── README.md
 ```

@@ -2,7 +2,7 @@
 title: KubeScape Operations
 description: 
 published: true
-date: 2025-03-19T10:13:28.521Z
+date: 2025-03-19T10:21:34.047Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T13:53:52.745Z
@@ -77,9 +77,36 @@ Absence de contrôle d’entrée/sortie (Ingress/Egress) -> Les applications peu
 - Implémenter des Network Policies.
 - Corriger les failles des images détectées.
 
-####  Jusqu’à quel point notre **politique de sécurité** doit-elle être stricte tout en préservant la productivité ?  
-####  Définirons-nous des **critères d’acceptation côté développement** pour garantir la sécurité des applications déployées sur nos clusters ?  
+####  Jusqu’à quel point notre **politique de sécurité** doit-elle être stricte tout en préservant la productivité ?
+La politique de sécurité doit être stricte sur les aspects critiques tout en restant flexible pour les besoins opérationnels :
 
+**Obligatoire et stricte pour :**
+- RBAC avec le moindre privilège.
+- Scan des images et blocage des vulnérabilités critiques.
+- Application des Network Policies pour limiter la communication entre pods.
+- Interdiction des conteneurs root et des fichiers en écriture.
+
+**Adaptative pour préserver la productivité :**
+- Possibilité de dérogations temporaires sous validation sécurité.
+- Sécurisation progressive avec un monitoring renforcé plutôt qu’un blocage immédiat.
+
+####  Définirons-nous des **critères d’acceptation côté développement** pour garantir la sécurité des applications déployées sur nos clusters ?
+
+Sécurité des images
+-    Seules les images signées et scannées sont autorisées.
+-    Aucun déploiement avec une image contenant une vulnérabilité critique.
+
+Conformité des manifestes Kubernetes
+-    Vérification automatique des RBAC, Network Policies et Pod Security Standards.
+-    Blocage des conteneurs exécutés en root ou avec des privilèges excessifs.
+
+Sécurité des secrets et configurations
+-    Interdiction d’exposer des secrets dans les fichiers YAML.
+-    Utilisation de Vault ou Kubernetes Secrets avec accès restreint.
+
+Validation CI/CD
+-    Tests de sécurité intégrés dans le pipeline CI/CD.
+-    Refus automatique des déploiements non conformes aux critères de sécurité.
 ## 4. Implémentation et Intégration de Kubescape  
 ####  Où allons-nous **intégrer Kubescape** ?
 - Dans le cluster en tant qu’Operator pour un scanning continu.
@@ -88,9 +115,9 @@ Absence de contrôle d’entrée/sortie (Ingress/Egress) -> Les applications peu
 
 ## 5. Exploitation des Résultats et Prise de Décision  
 #### Comment allons-nous **gérer les vulnérabilités identifiées** ? (Priorisation, correction, suivi...)
-Priorisation des corrections en fonction de la sévérité.
-Correction des erreurs critiques en priorité.
-Sensibilisation des équipes sur les bonnes pratiques et l'interprétation des rapports.
+- Priorisation des corrections en fonction de la sévérité.
+- Correction des erreurs critiques en priorité.
+- Sensibilisation des équipes sur les bonnes pratiques et l'interprétation des rapports.
 
 
 

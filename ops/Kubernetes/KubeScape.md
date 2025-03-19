@@ -2,7 +2,7 @@
 title: KubeScape Operations
 description: 
 published: true
-date: 2025-03-19T10:22:07.025Z
+date: 2025-03-19T10:29:36.088Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T13:53:52.745Z
@@ -48,7 +48,9 @@ dateCreated: 2025-03-18T13:53:52.745Z
 apres un premier scan
 NSA Score: 61.12%
 MITRE Score: 72.92%
-Plusieurs contrôles échoués, notamment sur les limites CPU/mémoire et des misconfigurations.
+Plusieurs contrôles échoués, notamment sur les limites CPU/mémoire et des "misconfigurations"...
+
+résultat  détaillé sur notre Cluster Fondative SI: [output_detailed](/output_detailed)
 
 #### Quels **standards de sécurité** allons-nous suivre ? (OWASP, CIS Benchmarks...)
 NSA, MITRE, CIS AKS sont les cadres utilisés dans le scan.

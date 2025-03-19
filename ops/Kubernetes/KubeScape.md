@@ -2,7 +2,7 @@
 title: KubeScape Operations
 description: 
 published: true
-date: 2025-03-19T10:21:34.047Z
+date: 2025-03-19T10:22:07.025Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T13:53:52.745Z

@@ -2,7 +2,7 @@
 title: KubeScape Operations
 description: 
 published: true
-date: 2025-03-19T07:39:25.997Z
+date: 2025-03-19T09:58:30.653Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T13:53:52.745Z
@@ -44,18 +44,22 @@ dateCreated: 2025-03-18T13:53:52.745Z
 #### Quel est le **niveau minimal de bonnes pratiques** que nous devons mettre en place ?  
 
 ## 2. Comprendre l’Environnement et les Objectifs  
-####  Quel est le **niveau actuel de posture de sécurité** de nos clusters Kubernetes ?  
-#### Quels **standards de sécurité** allons-nous suivre ? (OWASP, CIS Benchmarks...)  
-#### Quels sont les **risques spécifiques** à nos clusters et à nos workloads ?  
+####  Quel est le **niveau actuel de posture de sécurité** de nos clusters Kubernetes ?
+kubescan scan --verbose
+Frameworks scanned: NSA score: 61.12, MITRE score: 72.92
+#### Quels **standards de sécurité** allons-nous suivre ? (OWASP, CIS Benchmarks...)
+Frameworks scanned: NSA, MITRE, CIS AKS
+#### Quels sont les **risques spécifiques** à nos clusters et à nos workloads ?
 #### Quel est notre **objectif principal** avec Kubescape ? (Audit, conformité, surveillance continue...)  
 
 ## 3. Définir une Stratégie de Sécurité  
-####  Quelles sont les **priorités en matière de contrôles de sécurité** à implémenter ? (RBAC, Network Policies, vulnérabilités des images...)  
+####  Quelles sont les **priorités en matière de contrôles de sécurité** à implémenter ? (RBAC, Network Policies, vulnérabilités des images...)
 ####  Jusqu’à quel point notre **politique de sécurité** doit-elle être stricte tout en préservant la productivité ?  
 ####  Définirons-nous des **critères d’acceptation côté développement** pour garantir la sécurité des applications déployées sur nos clusters ?  
 
 ## 4. Implémentation et Intégration de Kubescape  
-####  Où allons-nous **intégrer Kubescape** ?  
+####  Où allons-nous **intégrer Kubescape** ?
+  - **Dans notre cluster kubernetes en tant que Operator pour avoir le continuous scanning, image vulnerability scanning, runtime analysis ...
   - **Dans notre workflow CI/CD** pour sécuriser les déploiements en continu ?  
   - **Dans nos Helm Charts** pour s’assurer que nos applications respectent les bonnes pratiques de sécurité ?  
 

@@ -2,7 +2,7 @@
 title: KubeScape Operations
 description: 
 published: true
-date: 2025-03-18T13:53:52.745Z
+date: 2025-03-19T07:39:25.997Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T13:53:52.745Z
@@ -17,27 +17,27 @@ dateCreated: 2025-03-18T13:53:52.745Z
 ####  **Kubescape Key Features**  
 
 - **Manifest File Scanning**  
-  Scan for misconfigurations as early as the manifest file submission stage.
+  Analysez les erreurs de configuration dès l'étape de soumission du fichier manifeste.
 
 - **IDE & CI/CD Integration**  
   -- VSCode, Lens  
   -- GitLab CI/CD, GitHub
 
 - **Cluster Scanning**  
-  Scan Kubernetes clusters for vulnerabilities, misconfigurations, and security issues.
+  Analysez les clusters Kubernetes à la recherche de vulnérabilités, d'erreurs de configuration et de problèmes de sécurité...
 
 - **Security Frameworks Supported**  
   -- NSA-CISA Kubernetes Hardening Guidance  
   -- MITRE ATT&CK  
   -- SOC 2, CIS Benchmarks  
-  - **Does not include OWASP**  
+  - **N'inclut pas OWASP**  
 
 - **YAML & Helm Chart Validation**  
-  No active cluster required for validation.
+  Aucun cluster actif requis pour la validation.
 
 - **Kubernetes Hardening**  
-  -- Identification and remediation of misconfigurations/vulnerabilities  
-  -- Manual, recurring, or event-triggered scans
+  -- Identification et correction des erreurs de configuration/vulnérabilités  
+  -- Analyses manuelles, récurrentes ou déclenchées par des événements
 
 
 

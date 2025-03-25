@@ -2,7 +2,7 @@
 title: Implémentation de Kyverno pour Kubernetes
 description: 
 published: true
-date: 2025-03-25T16:43:15.570Z
+date: 2025-03-25T17:15:15.589Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-25T16:43:15.570Z
@@ -44,7 +44,7 @@ Par exemple, il permet de :
 - **Appliquer** des restrictions sur la configuration des ressources, comme l’imposition de limites CPU/Mémoire, afin de prévenir les défaillances liées à une allocation inefficace des ressources.
 
 
-# Cas d'utilisation avec Kyverno
+# A quoi sert ? Exemples de Cas d'utilisation avec Kyverno.
 
 ## 1. Contrôleur TTL-after-finished pour nettoyage automatique des jobs
 

@@ -2,7 +2,7 @@
 title: Implémentation de Kyverno pour Kubernetes
 description: 
 published: true
-date: 2025-03-25T17:21:13.263Z
+date: 2025-03-25T17:21:22.535Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-25T16:43:15.570Z

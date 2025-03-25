@@ -2,7 +2,7 @@
 title: Implémentation de Kyverno pour Kubernetes
 description: 
 published: true
-date: 2025-03-25T17:15:15.589Z
+date: 2025-03-25T17:21:13.263Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-25T16:43:15.570Z
@@ -201,3 +201,16 @@ spec:
             securityContext:
               runAsUser: "!0"
 ```
+
+# Kyverno dans notre Tool Chain CI/CD fondative
+
+Kyverno peut être intégré aux pipelines CI/CD et à ArgoCD de plusieurs manières :
+
+* Validation avant déploiement : Le CLI de Kyverno peut être utilisé dans les pipelines CI/CD (GitLab CI, GitHub Actions, Jenkins, etc.) pour vérifier que les manifests Kubernetes respectent les bonnes pratiques avant leur déploiement.
+
+* Contrôle d’admission : Kyverno agit comme un webhook validateur dans Kubernetes, bloquant les déploiements qui ne respectent pas les politiques définies. Cela empêche l’introduction de configurations non conformes dans le cluster.
+
+* Analyse post-déploiement : Kyverno peut surveiller en continu les ressources Kubernetes en production et signaler les violations de politique. Cela permet de détecter toute dérive ou mauvaise configuration après le déploiement.
+
+* Intégration avec ArgoCD : Kyverno peut imposer des règles aux applications déployées via ArgoCD. Si une application ne respecte pas les politiques, ArgoCD peut bloquer son déploiement ou générer des alertes, garantissant ainsi la conformité dans un workflow GitOps.
+

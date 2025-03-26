@@ -2,7 +2,7 @@
 title: Plan d'action pour securiser notre cluster kubernetes
 description: 
 published: true
-date: 2025-03-26T11:17:31.891Z
+date: 2025-03-26T11:18:51.246Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-26T11:17:31.891Z
@@ -10,7 +10,7 @@ dateCreated: 2025-03-26T11:17:31.891Z
 
 # **Stratégie d'implémentation : Sécurisation du Cluster Kubernetes**
 
-L'approche sera divisée en deux phases : **contrôles de sécurité pré-déploiement** et **contrôles de sécurité post-déploiement**.
+L'approche sera divisée en deux phases : **contrôles de sécurité pré-déploiement: PRE-SECURITY** et **contrôles de sécurité post-déploiement: POST-SECURITY**.
 
 ## **1. Contrôles de sécurité pré-déploiement**
 ### **Intégration CI/CD**

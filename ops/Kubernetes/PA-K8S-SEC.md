@@ -2,7 +2,7 @@
 title: Plan d'action pour securiser notre cluster kubernetes
 description: 
 published: true
-date: 2025-04-02T15:06:12.536Z
+date: 2025-04-02T15:06:50.557Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-26T11:17:31.891Z
@@ -34,7 +34,7 @@ L'approche sera divisée en deux phases : **contrôles de sécurité pré-déplo
 
 
 
-# Implementation
+# Implémentation
 
 ## Kubescape CI/CD integration
 

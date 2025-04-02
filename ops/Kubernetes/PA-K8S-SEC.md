@@ -2,7 +2,7 @@
 title: Plan d'action pour securiser notre cluster kubernetes
 description: 
 published: true
-date: 2025-04-02T15:03:10.076Z
+date: 2025-04-02T15:06:12.536Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-26T11:17:31.891Z
@@ -111,6 +111,3 @@ repo-update:
 ```
 > Exemple : https://gitlab.fondative.com/si/applications/tt-planning/-/jobs/28504#L448
 > 
-
-
-
